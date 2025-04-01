@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //const textarea = (document.getElementById("Message") as HTMLInputElement).value;
     try{
       console.log("test")
-      const response = await fetch("http://localhost:3001/api/data", {
+      const response = await fetch("https://iia-front.onrender.com/api/data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // après 10 secondes ce qui est dans le corps de cette fonction
         // va s'exécuter
-        fetch('http://localhost:3001/api/data', {
+        fetch('https://iia-front.onrender.com/api/data', {
             method: 'POST',
             headers: {
                 "Content-Type":"application/json"
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 password.addEventListener('input', function(e:any){
 
-    fetch('http://localhost:3001/api/data', {
+    fetch('https://iia-front.onrender.com/api/data', {
         method: 'POST',
         headers: {
             "Content-Type":"application/json"
