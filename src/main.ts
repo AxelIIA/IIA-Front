@@ -4,16 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const responseText = document.getElementById("response") as HTMLElement;
   const email = (document.getElementById("email") as HTMLInputElement);
   const password = (document.getElementById("password") as HTMLInputElement);
-    
+  //const textarea = (document.getElementById("Message") as HTMLInputElement).value;
   
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-
-    //const textarea = (document.getElementById("Message") as HTMLInputElement).value;
     try{
       console.log("test")
-      const response = await fetch("https://iia-front.onrender.com/api/data", {
+      const response = await fetch("https://iia-backend.onrender.com/api/data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // après 10 secondes ce qui est dans le corps de cette fonction
         // va s'exécuter
-        fetch('https://iia-front.onrender.com/api/data', {
+        fetch('https://iia-backend.onrender.com/api/data', {
             method: 'POST',
             headers: {
                 "Content-Type":"application/json"
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 password.addEventListener('input', function(e:any){
 
-    fetch('https://iia-front.onrender.com/api/data', {
+    fetch('https://iia-backend.onrender.com/api/data', {
         method: 'POST',
         headers: {
             "Content-Type":"application/json"
