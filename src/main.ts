@@ -2,12 +2,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("dataForm") as HTMLFormElement;
   const responseText = document.getElementById("response") as HTMLElement;
-
-    form.addEventListener("submit", async (event) => {
+  const email = (document.getElementById("email") as HTMLInputElement);
+  const password = (document.getElementById("password") as HTMLInputElement);
+    
+  
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const email = (document.getElementById("email") as HTMLInputElement).value;
-    const password = (document.getElementById("password") as HTMLInputElement).value;
+
     //const textarea = (document.getElementById("Message") as HTMLInputElement).value;
     try{
       console.log("test")
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({email, password}),
+        body: JSON.stringify({email:email.value, password:password.value}),
       });
 
       const result = await response.json();
